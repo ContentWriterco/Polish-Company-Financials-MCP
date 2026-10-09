@@ -1,0 +1,22 @@
+{
+  "name": "polish-company-financials",
+  "version": "1.0.0",
+  "description": "Financial statements of Polish companies: revenue, profit, assets, rankings and sector benchmarks.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "polish-company-financials": {
+      "httpUrl": "https://compabase.com/api/mcp/financials",
+      "headers": {
+        "Authorization": "Bearer ${COMPABASE_MCP}"
+      }
+    }
+  },
+  "settings": [
+    {
+      "name": "Compabase MCP key",
+      "description": "Your MCP key (mcpk_...) from https://compabase.com/integrations?tab=mcp",
+      "envVar": "COMPABASE_MCP",
+      "sensitive": true
+    }
+  ]
+}
