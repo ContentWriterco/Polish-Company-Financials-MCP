@@ -1,0 +1,34 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ContentWriterco/polish-company-financials",
+  "title": "Polish Company Financials",
+  "description": "Polish company financial statements for AI agents: revenue, profit, assets, rankings, benchmarks.",
+  "version": "1.0.0",
+  "websiteUrl": "https://compabase.com/companies",
+  "icons": [
+    {
+      "src": "https://compabase.com/logo.png",
+      "mimeType": "image/png"
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/ContentWriterco/Polish-Company-Financials-MCP",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://compabase.com/api/mcp/financials",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional: Bearer mcpk_… key from https://compabase.com/integrations?tab=mcp. Clients with OAuth support can sign in instead.",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string",
+          "placeholder": "Bearer mcpk_YOUR_KEY_HERE"
+        }
+      ]
+    }
+  ]
+}
